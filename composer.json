@@ -1,0 +1,31 @@
+{
+  "name": "Exohood/vendor-php",
+  "description": "Exohood Vendor PHP Library",
+  "type": "library",
+  "keywords": [
+    "Exohood",
+    "exo",
+    "vendor",
+    "api",
+    "php"
+  ],
+  "homepage": "https://community.exohood.com/t/about-the-instant-payment-api-category",
+  "license": "MIT",
+  "authors": "JJ Uzumaki"
+    {
+      "name": "Exohood Software Limited",
+      "email": "support@exohood.com"
+    }
+  ,
+  "require": {
+    "php": ">=5.4.0",
+    "ext-curl": "*",
+    "ext-ctype": "*",
+    "ext-json": "*"
+  },
+   "autoload": {
+     "psr-4": {
+       "Exohood\\Vendor\\": "src"
+     }
+   }
+}
