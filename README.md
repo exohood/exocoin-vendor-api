@@ -49,13 +49,13 @@ All released changes will be documented in this section.
 ## Support
 
 Community support is available at
-[community.Exohood.com](https://community.Exohood.com).
+[community.exohood.com](https://community.Exohood.com).
 
 ## Documentation
 
 Further documentation on data structures (useful to create your own
 integration or to create the QR code yourself) and our Vendor API can
-be found at [community.Exohood.com](https://community.Exohood.com).
+be found at [community.exohood.com](https://community.exohood.com).
 
 ## Requirements
 
@@ -70,7 +70,7 @@ The following are required for using the Vendor API:
 ## Download
 
 You can download the latest PHP API from
-[github.com/Exohood/exohood-vendor-api](https://github.com/Exohood/exohood-vendor-api).
+[github.com/exohood/exohood-vendor-api](https://github.com/exohood/exohood-vendor-api).
 
 ## Installation
 
@@ -87,19 +87,19 @@ require_once 'src/vendor.php';
 Using composer, you can easily install with:
 
 ```
-composer require Exohood/exohood-vendor-api dev-beta
+composer require exohood/exohood-vendor-api dev-beta
 ```
 
 Alternatively, you can add the following to your `composer.json`:
 
 ```
 "require": {
-    "Exohood/exohood-vendor-api": "dev-beta"
+    "exohood/exohood-vendor-api": "dev-beta"
 },
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/Exohood/exohood-vendor-api"
+        "url": "https://github.com/exohood/exohood-vendor-api"
     }
 ],
 ```
@@ -112,7 +112,7 @@ Generate a QR code for the customer:
 
 ```php
 // Create the Vendor object.
-$vendor = new \Exohood\Vendor\vendor(
+$vendor = new \exohood\Vendor\vendor(
     'key_live_1234567890abcdefghijklm',
     'sec_live_zxyxwvutsrqponmlkjihgfedcba0987654321zxyxwvutsrqponmlkj'
 );
@@ -148,7 +148,7 @@ unless you are verifying a webhook signature or polling for payment
 confirmation (see below):
 
 ```php
-$vendor = new \Exohood\Vendor\vendor();
+$vendor = new \exohood\Vendor\vendor();
 ```
 
 ### Create a QR Code
@@ -164,7 +164,7 @@ parameters:
   currencies available below).
 - `$currency`<br />Your local currency code (from the list below).
 - `$outlet`<br />The id of the outlet from your user vendor account,
-  available from your [user vendor account](https://my.Exohood.com/user/vendor).
+  available from your [user vendor account](https://my.exohood.com/user/vendor).
 - `$paymentId`<br />The unique identifier of this transaction. If not
   provided, this will be automatically generated.
 
@@ -234,16 +234,16 @@ $paymentId = $vendor->getPaymentId();
 
 #### Payment Widget
 If you are an online vendor, you may want to use our [Vendor Payment
-Widget](https://github.com/Exohood/vendor-payment-widget) which will
+Widget](https://github.com/exohood/vendor-payment-widget) which will
 take the string returned from `getQr()` and display it as a QR code to
 scan or a clickable link. THis is useful if someone visits your online
 store on their mobile device. Please refer to our
-[API Guide](https://community.Exohood.com/t/about-the-instant-payment-api-category/53)
+[API Guide](https://community.exohood.com/t/about-the-instant-payment-api/)
 for more details.
 
 ### Webhook
 
-If you have provided a webhook URL in your [user vendor account](https://my.Exohood.com/user/vendor),
+If you have provided a webhook URL in your [user vendor account](https://my.exohood.com/user/vendor),
 a signed webhook will be sent to this URL.
 
 The user-agent sending the webhook will indicate the API version, the
@@ -263,7 +263,7 @@ To verify the signature of a payload, you need to create the `Vendor`
 object with your API key & secret:
 
 ```php
-$vendor = new \Exohood\Vendor\vendor(
+$vendor = new \exohood\Vendor\vendor(
     'key_live_1234567890abcdefghijklm',
     'sec_live_zxyxwvutsrqponmlkjihgfedcba0987654321zxyxwvutsrqponmlkj'
 );
@@ -315,7 +315,7 @@ and that you return a successful HTTP response as soon as possible.
 #### Generate Test Webhook
 
 Once you have set up your vendor account, you will have the availability
-to generate a test webhook from your [user vendor account](https://my.Exohood.com/user/vendor).
+to generate a test webhook from your [user vendor account](https://my.exohood.com/user/vendor).
 
 This will generate a random webhook payload and valid signature with
 which you can test your receiver using a REST client like
