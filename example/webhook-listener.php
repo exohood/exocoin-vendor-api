@@ -1,7 +1,7 @@
 <?php
 
 /**
- * A demonstration of the Exohood Vendor PHP API to listen for an incoming webhook.
+ * A demonstration of the ExoCoin Vendor API to listen for an incoming webhook.
  */
 
 // Load the EXO vendor class.
